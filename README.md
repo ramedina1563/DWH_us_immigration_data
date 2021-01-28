@@ -9,3 +9,17 @@ I94 Immigration Data: This data lists all applications made to enter to the USA 
 World Temperature Data: This dataset contains relevant information about climate at several cities around the world. The dataset contains the average temperature of cities and countries monthly calculated for a long period of time. The data comes from Kaggle
 U.S. City Demographic Data: This dataset provides mainly demographic statistics of cities in the US. The information contained in this dataset include city, state, median age, population, race, among others. The data comes from OpenSoft
 Airport Code Table: As the name says, this dataset provides all information related to airports around the world. The information contained here includes: type of airport, latitude, longitude, airport's city, among others. The data comes from datahun.io
+
+You'll find following files in the project:
+1. Capstone Project Template.ipynb: 
+2. dags/capstone.py:
+3. dags/create_tables.py:
+4. plugins/__init__.py: Loads helpers and operators in folder plugins
+5. plugins/helpers/sql_queries.py
+6. plugins/helpers/__init__.py
+7. plugins/operators/__init__.py
+8. plugins/operators/data_quality.py
+9. plugins/operators/load_dimension.py
+10. plugins/operators/load_fact.py
+11. plugins/operators/s3_to_redshift.py
+12. plugins/operators/stage_redshift.py
