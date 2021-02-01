@@ -11,15 +11,15 @@ U.S. City Demographic Data: This dataset provides mainly demographic statistics 
 Airport Code Table: As the name says, this dataset provides all information related to airports around the world. The information contained here includes: type of airport, latitude, longitude, airport's city, among others. The data comes from datahun.io
 
 You'll find following files in the project:
-1. Capstone Project Template.ipynb: 
-2. dags/capstone.py:
-3. dags/create_tables.py:
+1. Capstone Project Template.ipynb: This Notebook contains all steps in charge of doing the data preparation as well as a description of the steps to take on.
+2. dags/capstone.py: This code creates the main dag for the analysis on Airflow
+3. dags/create_tables.py: This code contains the functions that create the tables defined in the defined schema. This file is required by capstone.py 
 4. plugins/__init__.py: Loads helpers and operators in folder plugins
-5. plugins/helpers/sql_queries.py
+5. plugins/helpers/sql_queries.py: Code containing INSERT and COPY command. This file is required by capstone.py
 6. plugins/helpers/__init__.py
 7. plugins/operators/__init__.py
-8. plugins/operators/data_quality.py
-9. plugins/operators/load_dimension.py
-10. plugins/operators/load_fact.py
-11. plugins/operators/s3_to_redshift.py
-12. plugins/operators/stage_redshift.py
+8. plugins/operators/data_quality.py: Function in charge of performing data quality checks. This file is required by capstone.py
+9. plugins/operators/load_dimension.py: Function in charge of loading dimension table to Redshift. This file is required by capstone.py
+10. plugins/operators/load_fact.py: Function in charge of loading fact table to Redshift. This file is required by capstone.py
+11. plugins/operators/s3_to_redshift.py: Function in charge of copyingg the data from S3 to Redshifft. This file is required by capstone.py
+12. plugins/operators/stage_redshift.py: Function in charge of creating staging table in Redshift. This file is required by capstone.py
